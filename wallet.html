@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallet</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="wrapper relative min-h-screen w-full overflow-hidden">
+      <!-- Lines -->
+      <!--div
+        class="lines absolute left-1/2 top-0 mx-auto flex w-full max-w-[1280px] -translate-x-1/2 justify-between tablet:hidden"
+      >
+        <div class="h-screen w-[1px] bg-[#252525]"></div>
+        <div class="h-screen w-[1px] bg-[#252525]"></div>
+        <div class="h-screen w-[1px] bg-[#252525]"></div>
+        <div class="h-screen w-[1px] bg-[#252525]"></div>
+      </div-->
+      <!-- blurs -->
+      <div
+        class="absolute -right-[200px] bottom-0 h-[530px] w-[530px] rounded-full bg-[#8B65FA]/75 blur-[250px] xs:-bottom-[180px] xs:left-[100px] xs:h-[260px] xs:w-[260px] xs:blur-[123px]"
+      ></div>
+      <div
+        class="absolute hidden rounded-full bg-[#8B65FA]/75 blur-[250px] xs:-right-[100px] xs:top-[100px] xs:block xs:h-[300px] xs:w-[300px] xs:blur-[250px]"
+      ></div>
+      <div
+        class="absolute -bottom-[300px] right-[200px] h-[530px] w-[530px] rounded-full bg-[#38E567]/75 blur-[250px] xs:-bottom-[300px] xs:left-0 xs:h-[260px] xs:w-[260px] xs:blur-[123px]"
+      ></div>
+      <img
+        width="575"
+        height="415"
+        src="./img/graphic.png"
+        alt="vector"
+        class="absolute bottom-0 right-0 tablet:max-w-[300px] xs:-bottom-[30px] xs:-left-[30px]"
+      />
+      <!-- Header -->
+      <header class="absolute left-0 top-0 z-50 w-full xlg:px-[10px]">
+        <div
+          class="container relative z-[1000] flex w-full items-center justify-between space-x-5 pt-[10px] xlg:rounded-bl-[10px] xlg:rounded-br-[10px] xlg:bg-[#0D0D0D] xlg:py-[5px]"
+        >
+          <a
+            href="./index.html"
+            class="inline-block h-20 w-20 overflow-hidden rounded-full xlg:mr-auto xlg:h-[50px] xlg:w-[50px]"
+          >
+            <img
+              class="h-full w-full object-cover"
+              src="./img/logo.svg"
+              alt=""
+            />
+          </a>
+          <nav class="user xlg:hidden">
+            <ul
+              class="flex space-x-1 rounded-[8px] border-2 border-[#1D1D1D] bg-darkcolor px-1 py-1"
+            >
+              <li>
+                <a href="#" class="nav-link bg-[#1D1D1D] hover:bg-[#1D1D1D]"
+                  >World</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link hover:bg-[#1D1D1D]">Gallery</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link hover:bg-[#1D1D1D]">Earn</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link hover:bg-[#1D1D1D]">More</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link hover:bg-[#1D1D1D]">Dojo</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link hover:bg-[#1D1D1D]">Buy</a>
+              </li>
+            </ul>
+          </nav>
+          <a
+            href="./wallet.html"
+            class="flex rounded-[8px] border-[2px] border-[#1D1D1D] bg-darkcolor xlg:ml-auto"
+          >
+            <div class="flex items-center pr-[10px]">
+              <img
+                class="mr-2 h-[38px] w-[38px] overflow-hidden rounded-[6px] object-cover"
+                src="./img/user-avatar.svg"
+                alt="User avatar"
+              />
+              <div class="">
+                <p
+                  class="mb-[2.5px] font-inter text-[10px] leading-3 text-white"
+                >
+                  0x0173
+                </p>
+                <p class="font-inter text-[14px] leading-3 text-white">e15f</p>
+              </div>
+            </div>
+            <div
+              class="border border-b-0 border-l-[2px] border-r-0 border-t-0 border-[#1D1D1D] px-1 py-[2px]"
+            >
+              <img width="38" height="35px" src="./img/user-icon.svg" alt="" />
+            </div>
+          </a>
+          <div class="flex space-x-4 xlg:hidden">
+            <div class="header-lang-btn relative">
+              <button
+                value="EN"
+                class="flex cursor-pointer items-center justify-center space-x-[6px] rounded-[10px] border-2 border-[#1D1D1D] bg-[#0D0D0D]/75 px-[18px] py-[16px]"
+              >
+                <p class="font-nexa text-[14px] uppercase leading-5 text-white">
+                  EN
+                </p>
+                <svg
+                  width="11"
+                  height="8"
+                  viewBox="0 0 11 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.56209 0.500903L5.66948 4.39351L1.76282 0.500903L0.469971 1.79375L5.65543 7.24622L10.8549 1.79375L9.56209 0.500903Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              <div
+                class="header-lang-drop absolute left-0 top-full hidden w-full flex-col border-2 border-[#1D1D1D] bg-[#0D0D0D]/75"
+              >
+                <button
+                  data-lang="RU"
+                  class="px-[18px] py-2 text-left font-nexa text-[14px] uppercase leading-5 text-white"
+                >
+                  RU
+                </button>
+                <button
+                  data-lang="AZ"
+                  class="px-[18px] py-2 text-left font-nexa text-[14px] uppercase leading-5 text-white"
+                >
+                  AZ
+                </button>
+                <button
+                  data-lang="EN"
+                  class="px-[18px] py-2 text-left font-nexa text-[14px] uppercase leading-5 text-white"
+                >
+                  EN
+                </button>
+              </div>
+            </div>
+            <button
+              class="inline-block w-full items-center rounded-[10px] border-2 border-[#1D1D1D] bg-[#0D0D0D]/75 px-[30px] py-[13px] font-nexa text-[14px] font-bold leading-5 text-white transition-all hover:border-darkcolor hover:bg-[#1D1D1D]"
+            >
+              Connect wallet
+            </button>
+          </div>
+          <div
+            class="hidden h-[30px] w-[30px] items-center justify-center px-[4px] py-[5px] xlg:flex"
+          >
+            <button class="burger flex h-full w-full flex-col justify-between">
+              <span class="top-line h-[2px] w-full bg-white"></span>
+              <span class="middle-line h-[2px] w-full bg-white"></span>
+              <span class="bottom-line h-[2px] w-full bg-white"></span>
+            </button>
+          </div>
+        </div>
+        <div
+          id="menu"
+          class="pb-60px fixed left-0 top-[-100%] z-10 hidden h-screen w-full flex-col items-center overflow-y-auto bg-[#171b1f] px-[10px] pb-[60px] pt-[90px] xlg:flex xs:pb-8"
+        >
+          <ul class="mb-10 flex flex-col items-center space-y-10 xs:space-y-7">
+            <li>
+              <a
+                href="#"
+                class="font-nexa text-base font-bold leading-5 text-white"
+                >World</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-nexa text-base font-bold leading-5 text-white"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-nexa text-base font-bold leading-5 text-white"
+                >Earn</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-nexa text-base font-bold leading-5 text-white"
+                >More</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-nexa text-base font-bold leading-5 text-white"
+                >Dojo</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-nexa text-base font-bold leading-5 text-white"
+                >Buy</a
+              >
+            </li>
+          </ul>
+          <div class="menu-lang-btn relative w-full max-w-[340px]">
+            <button
+              value="EN"
+              class="flex w-full cursor-pointer items-center justify-center space-x-[6px] rounded-[10px] border-2 border-[#1D1D1D] bg-[#0d0d0d] px-[18px] py-[16px]"
+            >
+              <p class="font-nexa text-[14px] uppercase leading-5 text-white">
+                EN
+              </p>
+              <svg
+                width="11"
+                height="8"
+                viewBox="0 0 11 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.56209 0.500903L5.66948 4.39351L1.76282 0.500903L0.469971 1.79375L5.65543 7.24622L10.8549 1.79375L9.56209 0.500903Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <div
+              class="menu-lang-drop absolute left-0 top-full hidden w-full flex-col border-2 border-[#1D1D1D] bg-[#0D0D0D]"
+            >
+              <button
+                data-lang="RU"
+                class="px-[18px] py-2 text-center font-nexa text-[14px] uppercase leading-5 text-white"
+              >
+                RU
+              </button>
+              <button
+                data-lang="AZ"
+                class="px-[18px] py-2 text-center font-nexa text-[14px] uppercase leading-5 text-white"
+              >
+                AZ
+              </button>
+              <button
+                data-lang="EN"
+                class="px-[18px] py-2 text-center font-nexa text-[14px] uppercase leading-5 text-white"
+              >
+                EN
+              </button>
+            </div>
+          </div>
+          <button
+            class="text-centerrounded-[10px] text-bold text-bold mt-[10px] w-full max-w-[340px] rounded-[10px] border-2 border-[#1D1D1D] bg-[#0d0d0d] px-5 py-[15px] font-nexa text-[14px] leading-4 text-white"
+          >
+            Connect wallet
+          </button>
+        </div>
+      </header>
+      <!-- Main content -->
+      <div
+        class="relative z-40 mx-auto max-w-[1130px] pb-[100px] pl-[10px] pr-[10px] pt-[140px] md:pt-[100px]"
+      >
+        <!-- head -->
+        <div
+          class="flex items-center gap-[30px] xxs:flex-col xxs:items-start xxs:gap-[10px]"
+        >
+          <div class="flex items-center gap-[15px] xs:gap-[10px]">
+            <img
+              class="h-20 w-20 overflow-hidden rounded-lg xs:h-[60px] xs:w-[60px]"
+              width="80"
+              height="80"
+              src="./img/user-avatar.svg"
+              alt=""
+            />
+            <div>
+              <p
+                class="font-nexa text-base font-normal leading-[19px] text-white"
+              >
+                0x0173
+              </p>
+              <p
+                class="mt-[5px] font-nexabold text-2xl font-bold leading-none text-white"
+              >
+                e15f
+              </p>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="flex items-center gap-[10px] rounded-lg border-2 border-white px-10 py-[22px] font-nexabold text-base font-bold leading-none text-white xs:py-5 xxs:w-full xxs:justify-center"
+          >
+            <svg
+              width="15"
+              height="18"
+              viewBox="0 0 15 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4.16504 2.33329C3.70457 2.33329 3.33129 1.96019 3.33129 1.49996C3.33129 1.03973 3.70458 0.666626 4.16504 0.666626H10.835C11.2954 0.666626 11.6688 1.03973 11.6688 1.49996C11.6688 1.96019 11.2954 2.33329 10.835 2.33329V7.04715L14.5883 13.1405C15.6745 14.904 14.5024 17.3333 12.3495 17.3333H2.65047C0.497594 17.3333 -0.674481 14.904 0.411702 13.1405L4.16504 7.04715V2.33329ZM5.83252 2.33329V7.28311C5.83252 7.43738 5.78967 7.58863 5.70875 7.71996L4.40704 9.83329H10.593L9.29125 7.71996C9.21034 7.58863 9.1675 7.43738 9.1675 7.28311V2.33329H5.83252Z"
+                fill="white"
+              />
+            </svg>
+            Wardrobe
+          </a>
+        </div>
+        <!-- Tab btns -->
+        <div
+          class="mt-[50px] flex w-full max-w-[543px] items-center gap-2 rounded-lg bg-[#0E0F10] p-2 xs:mt-5"
+        >
+          <button
+            data-tab="1"
+            class="wallet-tab-btn active w-1/2 rounded-sm bg-[#1D1D1D] p-[10px] text-center font-nexabold text-base font-bold leading-[24px] text-white"
+          >
+            Aliens
+          </button>
+          <button
+            data-tab="2"
+            class="wallet-tab-btn w-1/2 rounded-sm bg-[#1D1D1D] p-[10px] text-center font-nexabold text-base font-bold leading-[24px] text-white"
+          >
+            Dojo Items
+          </button>
+        </div>
+        <!-- Tab content -->
+        <div class="mt-[30px]">
+          <div
+            class="wallet-tab-content wallet-tab-content-1 grid grid-cols-4 gap-6 md:grid-cols-3 sm:grid-cols-2 xs:gap-[10px]"
+          >
+            <div
+              class="max-w-[260px] rounded-[20px] bg-[#24292D]/60 p-[15px] shadow-cardshadow xs:rounded-[12px] xs:p-[10px]"
+            >
+              <img
+                class="h-auto w-full max-w-[230px] overflow-hidden rounded-[20px] object-cover xs:rounded-[12px]"
+                src="./img/card-img3.png"
+                alt=""
+              />
+              <p
+                class="mt-5 text-center font-nexabold text-base font-bold leading-none text-white xs:mt-[10px] xs:text-[12px]"
+              >
+                888 ALIEN #929
+              </p>
+            </div>
+            <div
+              class="max-w-[260px] rounded-[20px] bg-[#24292D]/60 p-[15px] shadow-cardshadow xs:rounded-[12px] xs:p-[10px]"
+            >
+              <img
+                class="h-auto w-full max-w-[230px] overflow-hidden rounded-[20px] object-cover xs:rounded-[12px]"
+                src="./img/card-img2.png"
+                alt=""
+              />
+              <p
+                class="mt-5 text-center font-nexabold text-base font-bold leading-none text-white xs:mt-[10px] xs:text-[12px]"
+              >
+                888 ALIEN #929
+              </p>
+            </div>
+            <div
+              class="max-w-[260px] rounded-[20px] bg-[#24292D]/60 p-[15px] shadow-cardshadow xs:rounded-[12px] xs:p-[10px]"
+            >
+              <img
+                class="h-auto w-full max-w-[230px] overflow-hidden rounded-[20px] object-cover xs:rounded-[12px]"
+                src="./img/card-img1.png"
+                alt=""
+              />
+              <p
+                class="mt-5 text-center font-nexabold text-base font-bold leading-none text-white xs:mt-[10px] xs:text-[12px]"
+              >
+                888 ALIEN #929
+              </p>
+            </div>
+            <div
+              class="max-w-[260px] rounded-[20px] bg-[#24292D]/60 p-[15px] shadow-cardshadow xs:rounded-[12px] xs:p-[10px]"
+            >
+              <img
+                class="h-auto w-full max-w-[230px] overflow-hidden rounded-[20px] object-cover xs:rounded-[12px]"
+                src="./img/card-img4.png"
+                alt=""
+              />
+              <p
+                class="mt-5 text-center font-nexabold text-base font-bold leading-none text-white xs:mt-[10px] xs:text-[12px]"
+              >
+                888 ALIEN #929
+              </p>
+            </div>
+          </div>
+          <div
+            class="wallet-tab-content wallet-tab-content-2 hidden grid-cols-4 gap-6 md:grid-cols-3 sm:grid-cols-2 xs:gap-[10px]"
+          >
+            <div
+              class="max-w-[260px] rounded-[20px] bg-[#24292D]/60 p-[15px] shadow-cardshadow xs:rounded-[12px] xs:p-[10px]"
+            >
+              <img
+                class="h-auto w-full max-w-[230px] overflow-hidden rounded-[20px] object-cover xs:rounded-[12px]"
+                src="./img/card-img1.png"
+                alt=""
+              />
+              <p
+                class="mt-5 text-center font-nexabold text-base font-bold leading-none text-white xs:mt-[10px] xs:text-[12px]"
+              >
+                888 ALIEN #929
+              </p>
+            </div>
+            <div
+              class="max-w-[260px] rounded-[20px] bg-[#24292D]/60 p-[15px] shadow-cardshadow xs:rounded-[12px] xs:p-[10px]"
+            >
+              <img
+                class="h-auto w-full max-w-[230px] overflow-hidden rounded-[20px] object-cover xs:rounded-[12px]"
+                src="./img/card-img3.png"
+                alt=""
+              />
+              <p
+                class="mt-5 text-center font-nexabold text-base font-bold leading-none text-white xs:mt-[10px] xs:text-[12px]"
+              >
+                888 ALIEN #929
+              </p>
+            </div>
+            <div
+              class="max-w-[260px] rounded-[20px] bg-[#24292D]/60 p-[15px] shadow-cardshadow xs:rounded-[12px] xs:p-[10px]"
+            >
+              <img
+                class="h-auto w-full max-w-[230px] overflow-hidden rounded-[20px] object-cover xs:rounded-[12px]"
+                src="./img/card-img2.png"
+                alt=""
+              />
+              <p
+                class="mt-5 text-center font-nexabold text-base font-bold leading-none text-white xs:mt-[10px] xs:text-[12px]"
+              >
+                888 ALIEN #929
+              </p>
+            </div>
+            <div
+              class="max-w-[260px] rounded-[20px] bg-[#24292D]/60 p-[15px] shadow-cardshadow xs:rounded-[12px] xs:p-[10px]"
+            >
+              <img
+                class="h-auto w-full max-w-[230px] overflow-hidden rounded-[20px] object-cover xs:rounded-[12px]"
+                src="./img/card-img4.png"
+                alt=""
+              />
+              <p
+                class="mt-5 text-center font-nexabold text-base font-bold leading-none text-white xs:mt-[10px] xs:text-[12px]"
+              >
+                888 ALIEN #929
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
