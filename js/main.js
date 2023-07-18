@@ -125,6 +125,8 @@ if (menuLangItem) {
 const amountDrop = document.querySelector(".amount-drop");
 const amountDropBtn = document.querySelector(".amount-drop-main");
 const amountDropItems = document.querySelectorAll(".amount-drop-items button");
+const amountMintBtn = document.querySelector(".mint-free-btn");
+const amountMintText = document.querySelector(".mint-free-btn span");
 
 if (amountDrop) {
   amountDropBtn.addEventListener("click", () => {
@@ -134,15 +136,25 @@ if (amountDrop) {
   amountDropItems.forEach((el) => {
     el.addEventListener("click", (e) => {
       let num = Number(e.target.textContent);
+
       amountDropBtn.setAttribute("value", num);
       amountDrop.classList.remove("active");
-      // amountDropBtn.querySelector("input").value = num;
+      amountDropBtn.value = num;
 
       if (amountDropBtn.value >= 1) {
-        document.querySelector(".mint-free-btn").style.display = "block";
-        document.querySelector(".mint-free-btn span").textContent = num;
+        amountMintBtn.style.display = "block";
+        amountMintText.textContent = num;
       }
     });
+  });
+
+  amountDropBtn.addEventListener("input", (e) => {
+    let input = e.target.value;
+    amountMintBtn.style.display = "block";
+    amountMintText.textContent = input;
+  });
+  amountDropBtn.addEventListener("focus", (e) => {
+    e.target.value = "";
   });
 }
 

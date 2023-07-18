@@ -1933,7 +1933,7 @@ body {
 
 /* ITEM BUY */
 
-.item-select.buy::before {
+/* .item-select.buy::before {
   content: "";
   width: 35px;
   height: 35px;
@@ -1945,6 +1945,12 @@ body {
   right: -13px;
   top: -13px;
   z-index: 3;
+} */
+
+.item-select.buy a {
+  position: absolute;
+  right: -13px;
+  top: -13px;
 }
 
 
@@ -2928,7 +2934,7 @@ body {
   pointer-events: none;
 }
 
-.item-select.buy {
+.item-select.buy img {
   filter: grayscale(1) contrast(60%);
 }
 
