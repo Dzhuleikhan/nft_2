@@ -2917,3 +2917,25 @@ body {
 .approve:disabled {
   background-color: rgba(221, 214, 214, 0.4);
 }
+
+.item-select .balance {
+  position: absolute;
+  font-size: 12px;
+  right: 5px;
+  bottom: 5px;
+  color: black;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.item-select.buy {
+  filter: grayscale(1) contrast(60%);
+}
+
+.item-select.buy .balance {
+  display: none;
+}
+
+.item-select .balance b {
+  font-weight: 700;
+}
