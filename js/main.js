@@ -15,6 +15,7 @@ const itemDropdown = document.querySelector(".item-dropdown");
 const itemDropdownMainBtn = document.querySelector(".item-drop-btn-main");
 const itemDropdownMenu = document.querySelector(".item-drop-menu");
 const itemWhiteListbtn = document.querySelectorAll(".item-whitelist");
+const itemWhiteListLink = document.querySelectorAll(".item-whitelist a");
 
 if (itemDropdownMainBtn) {
   itemDropdownMainBtn.addEventListener("click", () => {
