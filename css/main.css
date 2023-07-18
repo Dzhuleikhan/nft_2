@@ -2806,7 +2806,7 @@ body {
 }
 
 .item-whitelist button,
-.item-whitelist div,
+/* .item-whitelist div, */
 .item-whitelist img {
   pointer-events: none;
 }
