@@ -334,6 +334,7 @@
           >
             <div class="item-dropdown relative z-20 w-full">
               <button
+                data-name="888 ALIEN #929"
                 class="item-drop-btn-main flex w-full items-center justify-between rounded-lg border-2 border-white px-5 py-[17px]"
               >
                 <p
@@ -369,9 +370,10 @@
                   />
                   <div>
                     <p
+                      data-name="888 ALIEN #930"
                       class="uppercase mb-1 font-nexabold text-xs font-bold text-white"
                     >
-                      888 ALIEN #929
+                      888 ALIEN #930
                     </p>
                     <a
                       href="./whitelist.html"
@@ -393,9 +395,10 @@
                   />
                   <div>
                     <p
+                      data-name="888 ALIEN #931"
                       class="uppercaseleading-none mb-1 font-nexabold text-xs font-bold text-white"
                     >
-                      888 ALIEN #929
+                      888 ALIEN #931
                     </p>
                     <a
                       href="./whitelist.html"
@@ -417,9 +420,10 @@
                   />
                   <div>
                     <p
+                      data-name="888 ALIEN #932"
                       class="uppercaseleading-none mb-1 font-nexabold text-xs font-bold text-white"
                     >
-                      888 ALIEN #929
+                      888 ALIEN #932
                     </p>
                     <a
                       href="./whitelist.html"
@@ -929,7 +933,9 @@
                       .toDataURL("image/jpeg")
                       .replace("image/jpeg", "image/octet-stream");
 
-                    obNode.download = "888 ALIEN #929.jpg";
+                    obNode.download =
+                      document.querySelector(".item-drop-btn-main p")
+                        .textContent + ".jpg";
 
                     obNode.click();
                   }

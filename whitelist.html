@@ -349,6 +349,7 @@
           </div>
           <!-- amount -->
           <div class="mt-[30px] flex items-center justify-between xs:mt-5">
+            <!-- 
             <div
               class="amount-drop relative w-full max-w-[165px] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:bg-[#bfbbcf]"
             >
@@ -391,11 +392,19 @@
                 </button>
               </div>
             </div>
-            <p
-              class="mint-free-btn hidden rounded-lg bg-white px-5 py-[14px] font-nexabold text-base leading-none text-[#1D1D1D]"
-            >
-              Mint <span>1</span> (Free)
-            </p>
+             -->
+            <form action="#" class="amount-form">
+              <select name="amount" id="amount">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <button
+                class="rounded-lg bg-white px-5 py-[14px] font-nexabold text-base leading-none text-[#1D1D1D]"
+              >
+                Mint <span>1</span> (Free)
+              </button>
+            </form>
           </div>
           <!-- warning -->
           <div

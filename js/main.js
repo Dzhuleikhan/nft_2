@@ -24,6 +24,9 @@ if (itemDropdownMainBtn) {
 
   itemWhiteListbtn.forEach((el) => {
     el.addEventListener("click", (e) => {
+      let itemName = el.querySelector("p").getAttribute("data-name");
+      itemDropdownMainBtn.setAttribute("data-name", itemName);
+      itemDropdownMainBtn.querySelector("p").textContent = itemName;
       let mainPerson = e.target.getAttribute("data-id");
       document.getElementById("alien").setAttribute("data-id", mainPerson);
       itemDropdown.classList.remove("active");
@@ -122,41 +125,37 @@ if (menuLangItem) {
 
 // Amount Dropdown
 
-const amountDrop = document.querySelector(".amount-drop");
-const amountDropBtn = document.querySelector(".amount-drop-main");
-const amountDropItems = document.querySelectorAll(".amount-drop-items button");
-const amountMintBtn = document.querySelector(".mint-free-btn");
-const amountMintText = document.querySelector(".mint-free-btn span");
+// const amountDrop = document.querySelector(".amount-drop");
+// const amountDropBtn = document.querySelector(".amount-drop-main");
+// const amountDropItems = document.querySelectorAll(".amount-drop-items button");
+// const amountMintBtn = document.querySelector(".mint-free-btn");
+// const amountMintText = document.querySelector(".mint-free-btn span");
 
-if (amountDrop) {
-  amountDropBtn.addEventListener("click", () => {
-    amountDrop.classList.toggle("active");
-  });
-
-  amountDropItems.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      let num = Number(e.target.textContent);
-
-      amountDropBtn.setAttribute("value", num);
-      amountDrop.classList.remove("active");
-      amountDropBtn.value = num;
-
-      if (amountDropBtn.value >= 1) {
-        amountMintBtn.style.display = "block";
-        amountMintText.textContent = num;
-      }
-    });
-  });
-
-  amountDropBtn.addEventListener("input", (e) => {
-    let input = e.target.value;
-    amountMintBtn.style.display = "block";
-    amountMintText.textContent = input;
-  });
-  amountDropBtn.addEventListener("focus", (e) => {
-    e.target.value = "";
-  });
-}
+// if (amountDrop) {
+// amountDropBtn.addEventListener("click", () => {
+//   amountDrop.classList.toggle("active");
+// });
+// amountDropItems.forEach((el) => {
+//   el.addEventListener("click", (e) => {
+//     let num = Number(e.target.textContent);
+//     amountDropBtn.setAttribute("value", num);
+//     amountDrop.classList.remove("active");
+//     amountDropBtn.value = num;
+//     if (amountDropBtn.value >= 1) {
+//       amountMintBtn.style.display = "block";
+//       amountMintText.textContent = num;
+//     }
+//   });
+// });
+// amountDropBtn.addEventListener("input", (e) => {
+//   let input = e.target.value;
+//   amountMintBtn.style.display = "block";
+//   amountMintText.textContent = input;
+// });
+// amountDropBtn.addEventListener("focus", (e) => {
+//   e.target.value = "";
+// });
+// }
 
 // Wallet tabs
 
