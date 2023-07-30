@@ -101,8 +101,13 @@
           >
             <div class="flex items-center pr-[10px]">
               <img
-                class="mr-2 h-[38px] w-[38px] overflow-hidden rounded-[6px] object-cover"
+                class="mr-2 h-[38px] header-avatar w-[38px] overflow-hidden rounded-[6px] object-cover"
                 src="./img/user-avatar.svg"
+                alt="User avatar"
+              />
+              <img
+                class="mr-2 h-[38px] header-avatar-anonym w-[38px] overflow-hidden rounded-[6px] object-cover"
+                src="./img/avatar-anonym.svg"
                 alt="User avatar"
               />
               <div class="">
@@ -146,30 +151,40 @@
                 class="header-lang-drop absolute left-0 top-full hidden w-full flex-col border-2 border-[#1D1D1D] bg-[#0D0D0D]/75"
               >
                 <button
-                  data-lang="RU"
+                  data-lang="FR"
                   class="px-[18px] py-2 text-left font-nexa text-[14px] uppercase leading-5 text-white"
                 >
-                  RU
-                </button>
-                <button
-                  data-lang="AZ"
-                  class="px-[18px] py-2 text-left font-nexa text-[14px] uppercase leading-5 text-white"
-                >
-                  AZ
-                </button>
-                <button
-                  data-lang="EN"
-                  class="px-[18px] py-2 text-left font-nexa text-[14px] uppercase leading-5 text-white"
-                >
-                  EN
+                  FR
                 </button>
               </div>
             </div>
-            <button
-              class="inline-block w-full items-center rounded-[10px] border-2 border-[#1D1D1D] bg-[#0D0D0D]/75 px-[30px] py-[13px] font-nexa text-[14px] font-bold leading-5 text-white transition-all hover:border-darkcolor hover:bg-[#1D1D1D]"
-            >
-              Connect wallet
-            </button>
+            <div class="connect-btn-box">
+              <button
+                class="inline-block w-full h-full items-center rounded-[10px] border-2 border-[#1D1D1D] bg-[#0D0D0D]/75 px-[30px] py-[13px] font-nexa text-[14px] font-bold leading-5 text-white transition-all hover:border-darkcolor hover:bg-[#1D1D1D]"
+              >
+                Connect wallet
+              </button>
+              <div
+                class="connect-btn-alert mt-[10px] inline-flex items-center gap-[7px] rounded-lg border-[1px] border-dashed border-[#C8144A] p-[10px] xs:mt-5"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.626 13.4982L11.2675 1.80957C10.2459 0.0896862 7.7555 0.087401 6.73252 1.80957L0.374304 13.4982C-0.670047 15.2556 0.594347 17.4811 2.64125 17.4811H15.3585C17.4037 17.4811 18.6704 15.2574 17.626 13.4982ZM9 15.3717C8.41858 15.3717 7.94531 14.8984 7.94531 14.317C7.94531 13.7356 8.41858 13.2623 9 13.2623C9.58141 13.2623 10.0547 13.7356 10.0547 14.317C10.0547 14.8984 9.58141 15.3717 9 15.3717ZM10.0547 11.1529C10.0547 11.7343 9.58141 12.2076 9 12.2076C8.41858 12.2076 7.94531 11.7343 7.94531 11.1529V5.8795C7.94531 5.29808 8.41858 4.82481 9 4.82481C9.58141 4.82481 10.0547 5.29808 10.0547 5.8795V11.1529Z"
+                    fill="#C8144A"
+                  />
+                </svg>
+                <span
+                  class="font-nexa text-sm font-normal leading-none text-[#C8144A]"
+                  >Metamask is not installed</span
+                >
+              </div>
+            </div>
           </div>
           <div
             class="hidden h-[30px] w-[30px] items-center justify-center px-[4px] py-[5px] xlg:flex"
@@ -271,22 +286,10 @@
               class="menu-lang-drop absolute left-0 top-full hidden w-full flex-col border-2 border-[#1D1D1D] bg-[#0D0D0D]"
             >
               <button
-                data-lang="RU"
+                data-lang="FR"
                 class="px-[18px] py-2 text-center font-nexa text-[14px] uppercase leading-5 text-white"
               >
-                RU
-              </button>
-              <button
-                data-lang="AZ"
-                class="px-[18px] py-2 text-center font-nexa text-[14px] uppercase leading-5 text-white"
-              >
-                AZ
-              </button>
-              <button
-                data-lang="EN"
-                class="px-[18px] py-2 text-center font-nexa text-[14px] uppercase leading-5 text-white"
-              >
-                EN
+                FR
               </button>
             </div>
           </div>

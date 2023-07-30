@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   </head>
-  <body>
+  <body class="">
     <div class="wrapper relative min-h-screen w-full overflow-hidden">
       <div class="overlay">
         <div class="modal">
@@ -127,8 +127,13 @@
             <div class="flex items-center pr-[10px]">
               <img
                 id="pfpImage"
-                class="mr-2 h-[38px] w-[38px] overflow-hidden rounded-[6px] object-cover"
+                class="mr-2 h-[38px] header-avatar w-[38px] overflow-hidden rounded-[6px] object-cover"
                 src="./img/user-avatar.svg"
+                alt="User avatar"
+              />
+              <img
+                class="mr-2 h-[38px] header-avatar-anonym w-[38px] overflow-hidden rounded-[6px] object-cover"
+                src="./img/avatar-anonym.svg"
                 alt="User avatar"
               />
               <div class="">
@@ -172,30 +177,40 @@
                 class="header-lang-drop absolute left-0 top-full hidden w-full flex-col border-2 border-[#1D1D1D] bg-[#0D0D0D]/75"
               >
                 <button
-                  data-lang="RU"
+                  data-lang="FR"
                   class="px-[18px] py-2 text-left font-nexa text-[14px] uppercase leading-5 text-white"
                 >
-                  RU
-                </button>
-                <button
-                  data-lang="AZ"
-                  class="px-[18px] py-2 text-left font-nexa text-[14px] uppercase leading-5 text-white"
-                >
-                  AZ
-                </button>
-                <button
-                  data-lang="EN"
-                  class="px-[18px] py-2 text-left font-nexa text-[14px] uppercase leading-5 text-white"
-                >
-                  EN
+                  FR
                 </button>
               </div>
             </div>
-            <button
-              class="inline-block w-full items-center rounded-[10px] border-2 border-[#1D1D1D] bg-[#0D0D0D]/75 px-[30px] py-[13px] font-nexa text-[14px] font-bold leading-5 text-white transition-all hover:border-darkcolor hover:bg-[#1D1D1D]"
-            >
-              Connect wallet
-            </button>
+            <div class="connect-btn-box">
+              <button
+                class="inline-block w-full h-full items-center rounded-[10px] border-2 border-[#1D1D1D] bg-[#0D0D0D]/75 px-[30px] py-[13px] font-nexa text-[14px] font-bold leading-5 text-white transition-all hover:border-darkcolor hover:bg-[#1D1D1D]"
+              >
+                Connect wallet
+              </button>
+              <div
+                class="connect-btn-alert mt-[10px] inline-flex items-center gap-[7px] rounded-lg border-[1px] border-dashed border-[#C8144A] p-[10px] xs:mt-5"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.626 13.4982L11.2675 1.80957C10.2459 0.0896862 7.7555 0.087401 6.73252 1.80957L0.374304 13.4982C-0.670047 15.2556 0.594347 17.4811 2.64125 17.4811H15.3585C17.4037 17.4811 18.6704 15.2574 17.626 13.4982ZM9 15.3717C8.41858 15.3717 7.94531 14.8984 7.94531 14.317C7.94531 13.7356 8.41858 13.2623 9 13.2623C9.58141 13.2623 10.0547 13.7356 10.0547 14.317C10.0547 14.8984 9.58141 15.3717 9 15.3717ZM10.0547 11.1529C10.0547 11.7343 9.58141 12.2076 9 12.2076C8.41858 12.2076 7.94531 11.7343 7.94531 11.1529V5.8795C7.94531 5.29808 8.41858 4.82481 9 4.82481C9.58141 4.82481 10.0547 5.29808 10.0547 5.8795V11.1529Z"
+                    fill="#C8144A"
+                  />
+                </svg>
+                <span
+                  class="font-nexa text-sm font-normal leading-none text-[#C8144A]"
+                  >Metamask is not installed</span
+                >
+              </div>
+            </div>
           </div>
           <div
             class="hidden h-[30px] w-[30px] items-center justify-center px-[4px] py-[5px] xlg:flex"
@@ -297,22 +312,10 @@
               class="menu-lang-drop absolute left-0 top-full hidden w-full flex-col border-2 border-[#1D1D1D] bg-[#0D0D0D]"
             >
               <button
-                data-lang="RU"
+                data-lang="FR"
                 class="px-[18px] py-2 text-center font-nexa text-[14px] uppercase leading-5 text-white"
               >
-                RU
-              </button>
-              <button
-                data-lang="AZ"
-                class="px-[18px] py-2 text-center font-nexa text-[14px] uppercase leading-5 text-white"
-              >
-                AZ
-              </button>
-              <button
-                data-lang="EN"
-                class="px-[18px] py-2 text-center font-nexa text-[14px] uppercase leading-5 text-white"
-              >
-                EN
+                FR
               </button>
             </div>
           </div>
@@ -330,7 +333,7 @@
         >
           <!-- top dropdown -->
           <div
-            class="flex w-full max-w-[543px] items-center gap-[10px] space-x-6 tablet:mx-auto xs:space-x-0"
+            class="flex top-dropdown w-full max-w-[543px] items-center gap-[10px] space-x-6 tablet:mx-auto xs:space-x-0"
           >
             <div class="item-dropdown relative z-20 w-full">
               <button
@@ -436,8 +439,9 @@
               </div>
             </div>
             <button
+              disabled
               v-on:click="setPFP()"
-              class="text-blackborder-2 h-full w-full max-w-[165px] rounded-lg border-white bg-white px-[17px] py-[19px] font-nexabold text-[14px] leading-none xs:max-w-[94px]"
+              class="text-blackborder-2 set-pfp h-full w-full max-w-[165px] rounded-lg border-white bg-white px-[17px] py-[19px] font-nexabold text-[14px] leading-none xs:max-w-[94px]"
             >
               Set PFP
             </button>
@@ -464,21 +468,21 @@
                 />
                 <img
                   id="background"
-                  data-id="bg1"
+                  data-id="234"
                   class="absolute left-0 top-0 z-[1] h-full w-full object-cover"
                   src="./img/green-bg.png"
                   alt=""
                 />
                 <img
                   id="item1"
-                  data-id="item1"
+                  data-id="3234235"
                   class="z-5 absolute left-0 top-0 h-full w-full object-cover"
                   src="./img/placeholder.png"
                   alt=""
                 />
                 <img
                   id="item2"
-                  data-id="item2"
+                  data-id="345345"
                   class="absolute left-0 top-0 z-10 h-full w-full"
                   src="./img/placeholder.png"
                   alt=""
@@ -619,7 +623,7 @@
                     src="./img/persona.png"
                     alt=""
                   />
-                  <p class="balance"><b data-value="10">10</b>x</p>
+                  <p class="balance"><b data-value="30">30</b>x</p>
                 </button>
                 <button
                   data-id="1445625"
@@ -637,7 +641,42 @@
                     alt=""
                   />
                   <span>In use</span>
-                  <p class="balance"><b data-value="10">10</b>x</p>
+                  <p class="balance"><b data-value="20">20</b>x</p>
+                </button>
+                <button
+                  data-id="3452452"
+                  data-bg="./img/bg-yellow.png"
+                  class="item-select item-select-bg relative h-[97px] w-[97px] rounded-xl"
+                >
+                  <img
+                    class="absolute left-0 top-0 h-full w-full rounded-xl"
+                    src="./img/bg-yellow.png"
+                    alt=""
+                  />
+                  <img
+                    class="sm-item-alien relative z-[1] h-full w-full overflow-hidden rounded-xl"
+                    src="./img/persona.png"
+                    alt=""
+                  />
+                  <p class="balance"><b data-value="25">25</b>x</p>
+                </button>
+                <button
+                  data-id="1445625"
+                  data-bg="./img/bg-red.png"
+                  class="item-select item-select-bg relative h-[97px] w-[97px] rounded-xl"
+                >
+                  <img
+                    class="absolute left-0 top-0 h-full w-full rounded-xl"
+                    src="./img/bg-red.png"
+                    alt=""
+                  />
+                  <img
+                    class="sm-item-alien relative z-[1] h-full w-full overflow-hidden rounded-xl"
+                    src="./img/persona.png"
+                    alt=""
+                  />
+                  <span>In use</span>
+                  <p class="balance"><b data-value="22">22</b>x</p>
                 </button>
                 <button
                   data-id="678736"
@@ -881,11 +920,12 @@
               </div>
               <!-- cta -->
               <div
-                class="mx-auto mt-[35px] flex w-full max-w-[384px] justify-center gap-6 xs:gap-[10px]"
+                class="mx-auto items-cta-btns mt-[35px] flex w-full max-w-[384px] justify-center gap-6 xs:gap-[10px]"
               >
                 <button
                   v-on:click="onDownload"
-                  class="w-1/2 rounded-lg bg-white p-[15px] font-nexabold text-base font-bold leading-none text-[#171B1F]"
+                  disabled
+                  class="w-1/2 rounded-lg bg-white btn-download p-[15px] font-nexabold text-base font-bold leading-none text-[#171B1F]"
                 >
                   Download
                 </button>
@@ -1054,6 +1094,8 @@
 
           // Modal
           const approve = document.querySelector(".approve");
+          const btnDownload = document.querySelector(".btn-download");
+          const setPfp = document.querySelector(".set-pfp");
           const overlay = document.querySelector(".overlay");
           const overlayClose = document.querySelector(".modal-close");
 
@@ -1072,29 +1114,6 @@
           let nftBg = document.getElementById("background");
           let nftItem1 = document.getElementById("item1");
           let nftItem2 = document.getElementById("item2");
-
-          approve.addEventListener("click", () => {
-            overlay.classList.add("is-open");
-            let nftMainImgId = nftMainId.getAttribute("data-id");
-            let nftBgId = nftBg.getAttribute("data-id");
-            let nftItemFirst = nftItem1.getAttribute("data-id");
-            let nftItemSecond = nftItem2.getAttribute("data-id");
-            attr.selected_tokens.main_alien_id = nftMainImgId;
-            attr.selected_tokens.item1_bg = nftBgId;
-            attr.selected_tokens.item_2 = nftItemFirst;
-            attr.selected_tokens.item_3 = nftItemSecond;
-            console.log(attr);
-          });
-
-          overlayClose.addEventListener("click", () => {
-            overlay.classList.remove("is-open");
-          });
-
-          overlay.addEventListener("click", (e) => {
-            if (e.target === overlay) {
-              overlay.classList.remove("is-open");
-            }
-          });
 
           setTimeout(() => {
             approve.removeAttribute("disabled");
@@ -1161,9 +1180,20 @@
             ".items-content-3 .item-select.active"
           );
 
+          function addDisabled() {
+            approve.setAttribute("disabled", "");
+            btnDownload.setAttribute("disabled", "");
+            setPfp.setAttribute("disabled", "");
+          }
+          function removeDisabled() {
+            approve.removeAttribute("disabled");
+            btnDownload.removeAttribute("disabled");
+            setPfp.removeAttribute("disabled");
+          }
+
           nftItems.forEach((el) => {
             if (el.classList.contains("active")) {
-              let curNumber = el
+              let curNumber = +el
                 .querySelector(".balance b")
                 .getAttribute("data-value");
               el.querySelector(".balance b").textContent = curNumber - 1;
@@ -1175,20 +1205,16 @@
               let number = item
                 .querySelector(".balance b")
                 .getAttribute("data-value");
-              if (!item.classList.contains("active")) {
-                nftItemsNumber1.forEach((el) => {
-                  el.textContent = number;
+              if (!item.classList.contains("buy")) {
+                nftItems1.forEach((el) => {
+                  el.classList.remove("selected");
                 });
-                nftItems1Active.forEach((el) => {
-                  el.querySelector(".balance b").textContent = number - 1;
-                });
-
-                item.querySelector(".balance b").textContent = number - 1;
-              } else if (item.classList.contains("active")) {
-                nftItemsNumber1.forEach((el) => {
-                  el.textContent = number;
-                });
-                item.querySelector(".balance b").textContent = number - 1;
+                item.classList.add("selected");
+              }
+              if (item.classList.contains("buy")) {
+                addDisabled();
+              } else {
+                approve.removeAttribute("disabled");
               }
             });
           });
@@ -1198,20 +1224,17 @@
               let number = item
                 .querySelector(".balance b")
                 .getAttribute("data-value");
-              if (!item.classList.contains("active")) {
-                nftItemsNumber2.forEach((el) => {
-                  el.textContent = number;
-                });
-                nftItems2Active.forEach((el) => {
-                  el.querySelector(".balance b").textContent = number - 1;
-                });
 
-                item.querySelector(".balance b").textContent = number - 1;
-              } else if (item.classList.contains("active")) {
-                nftItemsNumber2.forEach((el) => {
-                  el.textContent = number;
+              if (!item.classList.contains("buy")) {
+                nftItems2.forEach((el) => {
+                  el.classList.remove("selected");
                 });
-                item.querySelector(".balance b").textContent = number - 1;
+                item.classList.add("selected");
+              }
+              if (item.classList.contains("buy")) {
+                addDisabled();
+              } else {
+                removeDisabled();
               }
             });
           });
@@ -1221,22 +1244,66 @@
               let number = item
                 .querySelector(".balance b")
                 .getAttribute("data-value");
-              if (!item.classList.contains("active")) {
-                nftItemsNumber3.forEach((el) => {
-                  el.textContent = number;
-                });
-                nftItems3Active.forEach((el) => {
-                  el.querySelector(".balance b").textContent = number - 1;
-                });
 
-                item.querySelector(".balance b").textContent = number - 1;
-              } else if (item.classList.contains("active")) {
-                nftItemsNumber3.forEach((el) => {
-                  el.textContent = number;
+              if (!item.classList.contains("buy")) {
+                nftItems3.forEach((el) => {
+                  el.classList.remove("selected");
                 });
-                item.querySelector(".balance b").textContent = number - 1;
+                item.classList.add("selected");
+              }
+              if (item.classList.contains("buy")) {
+                addDisabled();
+              } else {
+                removeDisabled();
               }
             });
+          });
+
+          approve.addEventListener("click", () => {
+            overlay.classList.add("is-open");
+            let nftMainImgId = nftMainId.getAttribute("data-id");
+            let nftBgId = nftBg.getAttribute("data-id");
+            let nftItemFirst = nftItem1.getAttribute("data-id");
+            let nftItemSecond = nftItem2.getAttribute("data-id");
+            attr.selected_tokens.main_alien_id = nftMainImgId;
+            attr.selected_tokens.item1_bg = nftBgId;
+            attr.selected_tokens.item_2 = nftItemFirst;
+            attr.selected_tokens.item_3 = nftItemSecond;
+            console.log(attr);
+
+            let itemSelect = document.querySelectorAll(".item-select");
+            itemSelect.forEach((el) => {
+              el.classList.remove("active");
+              let number = +el
+                .querySelector(".balance b")
+                .getAttribute("data-value");
+              el.querySelector(".balance b").textContent = number;
+            });
+            let itemSelected = document.querySelectorAll(
+              ".item-select.selected"
+            );
+            itemSelected.forEach((el) => {
+              let number = +el
+                .querySelector(".balance b")
+                .getAttribute("data-value");
+
+              if (!el.classList.contains("active")) {
+                el.classList.add("active");
+                el.querySelector(".balance b").textContent = number - 1;
+              }
+            });
+
+            removeDisabled();
+          });
+
+          overlayClose.addEventListener("click", () => {
+            overlay.classList.remove("is-open");
+          });
+
+          overlay.addEventListener("click", (e) => {
+            if (e.target === overlay) {
+              overlay.classList.remove("is-open");
+            }
           });
         </script>
       </main>
