@@ -3074,3 +3074,7 @@ body.unlogged #capture {
 .item-select.selected.active {
   border: 3px solid #47f074;
 }
+
+.items-cta-btns {
+  margin-left: 0;
+}
